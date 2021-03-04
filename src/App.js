@@ -4,7 +4,7 @@ import React from 'react';
 import logoSvg from './assets/img/pizza-logo.svg'
 
 
-
+//
 
 function App() { // функциональный компонент, HTML преобразуется в JS
   return ( // тут используется JSX, в JS можно писать HTML код
