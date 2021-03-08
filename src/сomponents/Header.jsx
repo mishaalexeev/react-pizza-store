@@ -1,5 +1,6 @@
-import logoSvg from './assets/img/pizza-logo.svg'
+import logoSvg from '../assets/img/pizza-logo.svg' // две точки - выход из папки
 import React from 'react';
+import Button from './Button'; // точка+слеш - значит в той же папке
 
 function Header() {
     return (
@@ -14,8 +15,8 @@ function Header() {
             </div>
           </div>
           <div className="header__cart">
-            <a href="/cart.html" className="button button--cart">
-              <span>520 ₽</span>
+            <Button className="button--cart">
+            <span>520 ₽</span>
               <div className="button__delimiter"></div>
               <svg
                 width="18"
@@ -47,7 +48,10 @@ function Header() {
                 />
               </svg>
               <span>3</span>
-            </a>
+
+            </Button>
+
+             
           </div>
         </div>
       </div>

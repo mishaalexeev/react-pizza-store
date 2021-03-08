@@ -5,11 +5,13 @@ import React from 'react';
 import classNames from 'classnames'; //
 
 
-function Button(props) { // все параметры которые мы передаем сюда будут хранится в props
-    return (<button className={classNames(
-         'button',{
-        'button--outline': props.outline,
-         } )}>{props.children}
+const Button = ({onClick, className, outline, children}) => { // все параметры которые мы передаем сюда будут хранится в props, UPD пропс заменили на реальные переменные
+    return (<button 
+        onClick={onClick}
+        className={classNames(
+         'button', className, {
+        'button--outline': outline,
+         } )}>{children}
          </button>
          );
 }

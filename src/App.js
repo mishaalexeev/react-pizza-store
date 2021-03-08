@@ -1,8 +1,8 @@
 // тут собираются все отдельные компоненты и отправляются в <App/> в index.js
 
 import React from 'react';
-import Header from './Header'; // формат указывать не обязательно
-import Button from './Button';
+import { Header, Categories} from './сomponents';  // первым делом ищет index.js
+// import Header from './сomponents'; // формат указывать не обязательно
 
 
 
@@ -11,26 +11,23 @@ import Button from './Button';
 //} // называется с большой буквы, значит React воспринимает как компонент
 
 function App() { // функциональный компонент, HTML преобразуется в JS
+ // const clickPoKnopke = () => {
+ //   alert('Hello!');
+ // }
+
   return ( // тут используется JSX, в JS можно писать HTML код
     //React.createElement('div', null, 'Hello World') - можно так
     //<div><h1>Hello World</h1></div> - а с JSX можно так
 <div className="wrapper">
       <Header/>
-      <Button outline>Кнопка</Button>
-      <Button>123</Button>
+
       <div className="content">
         <div className="container">
           <div className="content__top">
-            <div className="categories">
-              <ul>
-                <li className="active">Все</li>
-                <li>Мясные</li>
-                <li>Вегетарианская</li>
-                <li>Гриль</li>
-                <li>Острые</li>
-                <li>Закрытые</li>
-              </ul>
-            </div>
+           <Categories 
+            onClick={(name) => console.log(name)}
+            items={['Мясные','Вегетарианская','Гриль','Острые','Закрытые',] // массив
+           }/>
             <div className="sort">
               <div className="sort__label">
                 <svg
