@@ -35,7 +35,7 @@ import React from "react";
 //     );
 // }
 //}
-
+//
 function Categories({items, onClick}) {
     const [activeItem, setActiveItem] = React.useState(null) // UseState из библиотеки реакта
 
